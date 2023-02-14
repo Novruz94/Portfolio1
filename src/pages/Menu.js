@@ -1,53 +1,35 @@
-import React from 'react'
- import {MenuList} from '../helper/MenuList'
-// import Banner1 from '../images/1beef.jpg'
-// import Banner2 from '../images/2blackbean.jpg'
-// import Banner3 from '../images/3chicken.jpg'
-// import Banner4 from '../images/4turkey.jpeg'
-// import Banner5 from '../images/5veggie.jpg'
+import React  from 'react';
+ import { MenuList } from '../helper/MenuList';
+ import { Link } from 'react-router-dom';
 
 
-function Menu() {
-  return (
-    // <div className='slider'>
-    //    <div className='sliderContent'>
 
-    //      <div className='sliderItem'>
-    //       <img src={Banner1} alt=""/>
-    //      </div>
+const Menu = ()=> {
 
-    //      <div className='sliderItem'>
-    //       <img src={Banner2} alt=""/>
-    //      </div>
-
-    //      <div className='sliderItem'>
-    //       <img src={Banner3} alt=""/>
-    //      </div>
-
-    //      <div className='sliderItem'>
-    //       <img src={Banner4} alt=""/>
-    //      </div>
-
-    //      <div className='sliderItem'>
-    //       <img src={Banner5} alt=""/>
-    //      </div>
-
-    //    </div>
-    // </div>
-     <div className='menu'>
-        <h1 className='menuTitle'>Our Menu</h1>
-        <div className='menuList'>
-            {MenuList.map((menuItem,key)=>{
-                 return <div className='menuItem'>
-                    <div> <img src={menuItem.image}  /></div>
+    return (
+      <div className='menu'>
+          <h1 className='menuTitle'>Bizim Menyu</h1>
+          <div className='menuList'>
+            {
+              MenuList?.map(( menuItem, index )=>(
+                
+                    <Link to={`menyuƏlavələri/${menuItem.id}`}>
+                <div key={index} className='menuItem'>
+                   <div> <img src={menuItem.image} alt={menuItem.name}/> </div>
                    <h3>{menuItem.name}</h3>
-                   <p>{menuItem.price} TL</p>
-                       </div>
-            })}
-        </div>
-      
-     </div>
-  )
-}
+                   <p>{menuItem.price}</p>
+                </div>  
+                    </Link>
+                         
+                ))
+            }
+          </div>
+      </div>
+    )
 
-export default Menu
+}
+ 
+export default Menu;
+
+
+

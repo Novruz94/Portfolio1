@@ -7,33 +7,39 @@ import Cheese from "../images/6cheese.jpg"
 
 export const MenuList = [
     {
+        id: 1,
         name:"Beef Burger",
         image:Beef,
-        price:75,
+        price:"6,80",
     },
     {
+        id: 2,
         name:"BlackBean Burger",
         image:Blackbean,
-        price:70,
+        price:"6,50",
     },
     {
+        id: 3,
         name:"Chicken Burger",
         image:Chicken,
-        price:65,
+        price:"5,90",
     },
     {
+        id: 4,
         name:"Turkey Burger",
         image:Turkey,
-        price:90,
+        price:"8,10",
     },
     {
+        id: 5,
         name:"Veggie Burger",
         image:Veggie,
-        price:75,
+        price:"6,90",
     },
     {
+        id: 6,
         name:"Cheese Burger",
         image:Cheese,
-        price:80,
+        price:"7,20",
     },
 ];
